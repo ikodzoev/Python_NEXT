@@ -3,9 +3,9 @@
 используйте его строковое представление."""
 
 
-def key_value_dict(**args):
+def key_value_dict(**kwargs):
     result = {}
-    for key, value in args.items():
+    for key, value in kwargs.items():
         try:
             result[value] = key
         except TypeError:
