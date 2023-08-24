@@ -17,9 +17,9 @@ class FullNameDescriptor:
 
     def __set__(self, instance, value):
         if not all(x.istitle() for x in value.split()):
-            raise ValueError("ФИО должно начинаться с заглавной буквы")
+            raise ValueError("ФИО должны начинаться с заглавной буквы")
         if not all(x.isalpha() or x.isspace() for x in value):
-            raise ValueError("ФИО должно содержать только буквы")
+            raise ValueError("ФИО должны содержать только буквы")
         instance.__dict__[self.name] = value
 
 
@@ -41,7 +41,7 @@ class Student:
 
     def add_grade(self, subject, grade):
         if subject not in self.subjects:
-            raise ValueError(f"Предмет {subject} не допустим")
+            raise ValueError(f"Предмет {subject} недопустим")
         if not 2 <= grade <= 5:
             raise ValueError("Оценка должна быть от 2 до 5")
         self.grades[subject].append(grade)
