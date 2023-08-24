@@ -87,8 +87,8 @@ class Student:
 
 if __name__ == '__main__':
     # Создаем экземпляры класса Студент для двух студентов
-    ivan = Student('Иван Иванов', 'subjects.csv')
-    anna = Student('Мария Петрова', 'subjects.csv')
+    ivan = Student('Иванов Иван Петрович', 'subjects.csv')
+    anna = Student('Петрова Анна Владимировна', 'subjects.csv')
 
     # Добавляем оценки и результаты тестов для Ивана
     ivan.add_grade('Математика', 5)
