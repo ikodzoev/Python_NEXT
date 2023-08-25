@@ -67,7 +67,7 @@ class Student:
         Добавляет результат теста по заданному предмету.
         """
         if subject not in self.subjects:
-            raise ValueError(f"Предмет {subject} не допустим")
+            raise ValueError(f"Предмет {subject} недопустим")
         if not 0 <= score <= 100:
             raise ValueError("Результат теста должен быть от 0 до 100")
         self.test_scores[subject].append(score)
